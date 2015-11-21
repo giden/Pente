@@ -1,0 +1,19 @@
+{
+  "name": "ZadCzat",
+  "version": "0.1.0",
+  "authors": [
+    "Paweł Albecki <palbecki@inf.ug.edu.pl>"
+  ],
+  "license": "GNU GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,0 +1,183 @@
+// out: ../public/css/styl.css, compress: true
+@bgColor: #9D7C0D;
+@startColor: #F2BA05;
+@endColor: #ff7600;
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: @bgColor;
+    font-size: 11pt;
+
+min-width: 300px;
+}
+.container {
+    width: 900px;
+    height: 500px;
+    margin: auto;
+}
+#menu {
+    margin-top: 20px;
+    background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+position: relative; 
+
+    width: 380px;
+    height: 488px;
+    float: right;
+    border: 1px solid #BE880C;
+    border-radius: 15px;
+    padding: 5px
+}
+#goban {
+    margin-top: 20px;
+    float: left;
+    width: 500px;
+    height: 500px;
+}
+.gobanRow {
+    width: 100%;
+    height: 5.2631578%;
+    border-bottom: 1px solid @bgColor;
+    box-sizing: border-box;
+}
+.gobanCol {
+    width: 5.2631578%;
+    height: 100%;
+    background-color: saturate(#C99D0A, 20%);
+    float: left;
+    border-radius: 2px;
+    border-left: 1px solid @bgColor;
+
+box-sizing: border-box;
+}
+
+.gobanColPinki {
+    width: 5.2631578%;
+    height: 100%;
+    background-color: saturate(pink, 20%);
+    float: left;
+    border-radius: 2px;
+    border-left: 1px solid @bgColor;
+
+box-sizing: border-box;
+}
+
+.shapeBox {
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+float:left;
+}
+
+.shapeBoxBig {
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+}
+
+.turnBlock {
+    font-size: 18px;
+    padding:10px;
+    height:15px;
+}
+
+
+.generate(@n, @i:1) when (@i <= @n) {
+    .gobanCell@{i}Cross {
+    margin: auto;
+    margin-top: 0.65%;
+    width: 3px;
+    height: 100%;
+    background-color: #463B18;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.gobanCell@{i}Cross:before {
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    content: "";
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.gobanCell@{i}Circle {
+    margin: 10%;
+    width: 80%;
+    height: 80%;
+    border: 3px solid #e74c3c;
+    border-radius: 50%;
+    box-sizing: border-box;
+}.generate(@n, (@i+1));
+}.generate(2);
+
+
+.change {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+.figura {
+    float: right;
+    width: 90px;
+    padding-top:10px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#pokoje {
+
+    float: right;
+    width: 100px;
+    border-left: 1px solid black;
+        border-bottom: 1px solid black;
+
+    height: 285px;
+    padding: 10px;
+}
+
+#wynik {
+    font-size: 30px;
+    padding:10px;
+    bottom: 2px;
+    position: absolute; 
+
+}
+
+#selectUsers {
+    font-size: 13px;
+    padding-left:10px;
+    height: 105px;
+    overflow-y: scroll;
+
+}
+
+
+
+#newGame {
+        background-color: aqua;
+    font-size: 22px;
+    width: 80px;
+        height: 80px;
+    bottom: 10px;
+    right: 20px;
+    position: absolute; 
+}
+
+#roomsBox{
+    height:243px
+}
+
+#chat {
+    padding: 10px;
+    height: 285px;
+    border-bottom: 1px solid black;
+
+}
+#rozmowa {
+    height: 258px;
+    overflow-y: scroll;
+    margin-top: 10px
+}
